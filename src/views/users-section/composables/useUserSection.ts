@@ -1,10 +1,10 @@
-import { onMounted, ref, computed } from "vue"
+import { onMounted, ref, computed, type Ref } from "vue"
 import { getUsers as getUsersService } from '@/api/services/index'
 
-import type { UserServiceResponse } from "../types"
+import type { IUser, UserServiceResponse } from "../types"
 
 export const useUsersSection = () => {
-  const users = ref([])
+  const users: Ref<IUser[]> = ref([])
   const page = ref(1)
   const totalPages = ref(1)
 
@@ -13,7 +13,8 @@ export const useUsersSection = () => {
   const getUsers = () => {
     getUsersService({ page: page.value })
       .then((res: UserServiceResponse) => {
-        console.log(res)
+        users.value = [...users.value, ...res.data.users]
+        totalPages.value = res.data.total_pages
       })
   }
 

@@ -30,7 +30,7 @@ withDefaults(defineProps<IProps>(), {
     background: $btn-hover-bg-color;
   }
 
-  .disabled {
+  &.disabled {
     pointer-events: none;
     background: $disabled;
     color: $text-disabled;

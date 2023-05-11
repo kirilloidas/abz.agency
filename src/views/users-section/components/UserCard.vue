@@ -5,7 +5,10 @@
       :src="item.photo"
     />
 
-    <span></span>
+    <p class="user-card__text user-card__text_name p1 ellipsis">{{ item.name }}</p>
+    <p class="user-card__text user-card__text_position p1 ellipsis">{{ item.position }}</p>
+    <p class="user-card__text user-card__text_email p1 ellipsis">{{ item.email }}</p>
+    <p class="user-card__text user-card__text_phone p1 ellipsis">{{ item.phone }}</p>
   </div>
 </template>
 
@@ -16,3 +19,31 @@ interface IProps {
 }
 defineProps<IProps>()
 </script>
+
+<style scoped lang="scss">
+.user-card {
+  border-radius: 10px;
+  padding: 20px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 254px;
+  width: 282px;
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: center;
+    &_name {
+      margin-bottom: 20px;
+    }
+  }
+}
+</style>

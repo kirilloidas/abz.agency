@@ -4,7 +4,7 @@ export const getToken = () => {
   return api().get('/token')
 }
 
-export const getUsers = ({ page, count = 5 }: { page: number; count?: number }) => {
+export const getUsers = ({ page, count = 6 }: { page: number; count?: number }) => {
   return api().get(`/users?page=${page}&count=${count}`)
 }
 

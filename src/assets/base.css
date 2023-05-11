@@ -62,6 +62,12 @@
   line-height: 26px;
 }
 
+nav, ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 /* .text-primary {
   color: #F4E041;
 }
@@ -99,4 +105,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
