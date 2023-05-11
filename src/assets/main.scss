@@ -1,0 +1,13 @@
+@import './variables.scss';
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#app {
+  // max-width: 1170px;
+  // margin: 0 auto;
+
+  font-weight: normal;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background-color: $main-bg-color;
+}
