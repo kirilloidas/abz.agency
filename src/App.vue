@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './views/Header.vue';
 import TopSection from './views/TopSection.vue';
+import FormSection from './views/form-section/FormSection.vue';
 import UsersSection from './views/users-section/UsersSection.vue';
 </script>
 
@@ -10,6 +11,7 @@ import UsersSection from './views/users-section/UsersSection.vue';
   <main class="page-main">
     <TopSection/>
     <UsersSection/>
+    <FormSection/>
   </main>
 </template>
 
