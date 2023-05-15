@@ -15,3 +15,13 @@ export const getCurrentUser = (id: number) => {
 export const getPositions = () => {
   return api().get('/positions')
 }
+
+export const signUp = ({
+  token,
+  data
+}: {
+  token: string;
+  data: FormData,
+}) => {
+  return api(token).post('/users', data)
+}

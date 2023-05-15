@@ -19,7 +19,6 @@ withDefaults(defineProps<IProps>(), {
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
 .btn {
-  padding: 4px 29px;
   cursor: pointer;
   border-radius: 80px;
   background: $btn-bg-color;

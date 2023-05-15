@@ -8,7 +8,7 @@
       >
         <li 
           class="user-list__item"
-          v-for="item of users"
+          v-for="item of usersStore.users"
           :key="item.id"
         >
           <UserCard
@@ -20,8 +20,8 @@
 
     <CustomButton 
       class="users-section__btn"
-      :disabled="isAllUsers"
-      @click="showMore"
+      :disabled="usersStore.isAllUsers"
+      @click="usersStore.showMore"
     >
       Show more
     </CustomButton>
@@ -29,15 +29,14 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import CustomButton from '@/components/CustomButton.vue';
 import UserCard from './components/UserCard.vue';
-import { useUsersSection } from './composables/useUserSection';
+import { useUsersStore } from '@/stores/users';
 
-const {
-  users,
-  isAllUsers,
-  showMore,
-} = useUsersSection()
+const usersStore = useUsersStore()
+
+onMounted(usersStore.getUsers)
 </script>
 
 <style scoped lang="scss">
@@ -54,6 +53,7 @@ const {
 
   &__btn {
     margin-top: 54px;
+    padding: 4px 18px 4px 19px;
   }
 
   .list-block {

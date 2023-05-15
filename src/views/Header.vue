@@ -8,10 +8,10 @@
       />
 
       <div class="btns-block">
-        <CustomButton class="btn">
+        <CustomButton class="btns-block__btn">
           Users
         </CustomButton>
-        <CustomButton class="btn">
+        <CustomButton class="btns-block__btn">
           Sign up
         </CustomButton>
       </div>
@@ -40,6 +40,10 @@ import CustomButton from '@/components/CustomButton.vue';
       display: flex;
       align-items: center;
       gap: 10px;
+
+      &__btn {
+        padding: 4px 29px;
+      }
     }
   }
 }
