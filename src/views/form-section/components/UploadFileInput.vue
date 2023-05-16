@@ -52,8 +52,10 @@ const selectFile = () => {
 <style scoped lang="scss">
 .upload-file-wrapper {
   display: flex;
+  margin-top: 50px;
+
   &__btn {
-    padding: 14px 15px;
+    padding: 13px 15px;
     border: 1px solid rgba(0, 0, 0, 0.87);
     border-radius: 4px 0px 0px 4px;
     cursor: pointer;
@@ -61,7 +63,7 @@ const selectFile = () => {
   &__input-name {
     border: 1px solid #D0CFCF;
     border-radius: 0 4px 4px 0;
-    padding: 14px 0 14px 16px;
+    padding: 13px 0 13px 16px;
     width: 100%;
   }
   &__input-file {

@@ -97,6 +97,10 @@ const {
   flex-direction: column;
   align-items: center;
 
+  &__title {
+    text-align: center;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -111,6 +115,18 @@ const {
       width: 100px;
       margin: 50px auto;
       padding: 4px 22px 4px 23px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form-section {
+
+    &__title {
+      width: 328px;
+    }
+    .form {
+      width: 328px;
     }
   }
 }

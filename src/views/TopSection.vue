@@ -53,4 +53,19 @@ import CustomButton from '@/components/CustomButton.vue'
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .top-section {
+    padding: 88px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-section {
+    padding: 40px 0 71px 0;
+    .section-content {
+      width: 328px;
+    }
+  }
+}
 </style>

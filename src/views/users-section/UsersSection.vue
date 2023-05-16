@@ -52,7 +52,7 @@ onMounted(usersStore.getUsers)
   }
 
   &__btn {
-    margin-top: 54px;
+    margin-top: 50px;
     padding: 4px 18px 4px 19px;
   }
 
@@ -62,6 +62,30 @@ onMounted(usersStore.getUsers)
       flex-wrap: wrap;
       gap: 29px;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .users-section {
+    .list-block {
+      .user-list {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .users-section {
+
+    &__title {
+      width: 328px;
+    }
+    .list-block {
+      .user-list {
+        gap: 20px;
+      }
     }
   }
 }

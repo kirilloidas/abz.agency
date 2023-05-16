@@ -10,16 +10,21 @@ export const useUsersStore = defineStore('users', () => {
 
   const isAllUsers = computed(() => page.value === totalPages.value)
 
+  const setPage = (pageNum: number) => {
+    page.value = pageNum
+  }
+
+  const setUsers = (usersParam: IUser[]) => {
+    users.value = usersParam
+  }
+
   const getUsers = () => {
     getUsersService({ page: page.value })
       .then((res: UserServiceResponse) => {
-        users.value = [...users.value, ...res.data.users]
+        // users.value = [...users.value, ...res.data.users]
+        setUsers([...users.value, ...res.data.users])
         totalPages.value = res.data.total_pages
       })
-  }
-
-  const setPage = (pageNum: number) => {
-    page.value = pageNum
   }
 
   const showMore = () => {
@@ -35,5 +40,6 @@ export const useUsersStore = defineStore('users', () => {
     showMore,
     getUsers,
     setPage,
+    setUsers,
   }
 })

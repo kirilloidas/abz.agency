@@ -29,7 +29,7 @@ defineProps<IProps>()
   flex-direction: column;
   align-items: center;
   height: 254px;
-  width: 282px;
+  width: 370px;
 
   &__avatar {
     width: 70px;
@@ -44,6 +44,24 @@ defineProps<IProps>()
     &_name {
       margin-bottom: 20px;
     }
+  }
+}
+
+@media (max-width: 1170px) {
+  .user-card {
+    width: 282px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .user-card {
+    width: 344px;
+  }
+}
+
+@media (max-width: 767px) {
+  .user-card {
+    width: 328px;
   }
 }
 </style>

@@ -21,4 +21,10 @@ import UsersSection from './views/users-section/UsersSection.vue';
   width: 1170px;
   margin: 0 auto;
 }
+
+@media (max-width: 1170px) {
+  .page-main {
+    width: 100vw;
+  }
+}
 </style>

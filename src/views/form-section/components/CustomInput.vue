@@ -33,16 +33,15 @@ withDefaults(defineProps<IProps>(), {
 })
 
 defineEmits<IEmits>()
-
-const inputHandler = value => console.log(value)
 </script>
 
 <style scoped lang="scss">
 .custom-input-label {
   &__input {
     border: 1px solid #D0CFCF;
+    background-color: rgba(0,0,0,0);
     border-radius: 4px;
-    padding: 14px 0 14px 16px;
+    padding: 13px 0 13px 16px;
     width: 100%;
   }
 

@@ -43,6 +43,7 @@ export const useFormSection = ({ errors }: { errors: { [key: string]: Ref<string
           data: createFormData(formFields)
         })
           .then(() => {
+            usersStore.setUsers([])
             usersStore.setPage(1)
             usersStore.getUsers()
           })

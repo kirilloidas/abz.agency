@@ -12,5 +12,9 @@ export const useModalStore = defineStore('modal', () => {
     modalMsg.value = ''
   }
 
-  return { modalMsg, setModalMsg, clearModalMsg }
+  return {
+    modalMsg,
+    setModalMsg,
+    clearModalMsg
+  }
 })

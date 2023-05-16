@@ -60,6 +60,7 @@ const selectedOption = computed({
     display: flex;
     flex-direction: column;
     margin-top: 3px;
+    gap: 6px;
 
     &__item {
       display: flex;
@@ -68,6 +69,8 @@ const selectedOption = computed({
 
     &__input {
       margin-right: 12px;
+      width: 20px;
+      height: 20px;
     }
 
     &__error {

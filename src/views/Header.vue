@@ -8,10 +8,10 @@
       />
 
       <div class="btns-block">
-        <CustomButton class="btns-block__btn">
+        <CustomButton class="btns-block__btn btns-block__btn_left">
           Users
         </CustomButton>
-        <CustomButton class="btns-block__btn">
+        <CustomButton class="btns-block__btn btns-block__btn_right">
           Sign up
         </CustomButton>
       </div>
@@ -42,8 +42,48 @@ import CustomButton from '@/components/CustomButton.vue';
       gap: 10px;
 
       &__btn {
-        padding: 4px 29px;
+
+        &_left {
+          padding: 4px 29px;
+        }
+
+        &_right {
+          padding: 4px 22px 4px 23px;
+        }
       }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .page-header {
+    .header-content {
+      width: 100%;
+      padding: 0 60px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-header {
+    .header-content {
+      padding: 0 32px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .page-header {
+    .header-content {
+      padding: 0 32px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    .header-content {
+      padding: 0 16px;
     }
   }
 }
