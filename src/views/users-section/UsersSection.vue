@@ -1,5 +1,5 @@
 <template>
-  <section class="users-section">
+  <section class="users-section" id="users-section">
     <h2 class="users-section__title h1">Working with GET request</h2>
 
     <div class="list-block">

@@ -1,18 +1,21 @@
 <template>
-  <button 
+  <component
+    :is="tag"
     class="btn p1"
     :class="{disabled}"
   >
     <slot></slot>
-  </button>
+  </component>
 </template>
 
 <script setup lang="ts">
 interface IProps {
   disabled?: boolean;
+  tag?: string;
 }
 withDefaults(defineProps<IProps>(), {
-  disabled: false
+  disabled: false,
+  tag: 'a'
 })
 </script>
 
@@ -23,6 +26,8 @@ withDefaults(defineProps<IProps>(), {
   border-radius: 80px;
   background: $btn-bg-color;
   transition: all .3s ease-in-out;
+  text-decoration: none;
+  color: #000;
   border: none;
 
   &:hover {

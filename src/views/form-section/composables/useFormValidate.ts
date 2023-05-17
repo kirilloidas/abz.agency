@@ -8,7 +8,6 @@ export const useFormValidate = () => {
   const photoError = ref('')
 
   const nameValidate = (name: string) => {
-    console.log(name)
     nameError.value = name.length < 2 || name.length > 60 ? 'Incorrect length' : ''
   }
 

@@ -8,10 +8,16 @@
       />
 
       <div class="btns-block">
-        <CustomButton class="btns-block__btn btns-block__btn_left">
+        <CustomButton 
+          class="btns-block__btn btns-block__btn_left"
+          href="#users-section"
+        >
           Users
         </CustomButton>
-        <CustomButton class="btns-block__btn btns-block__btn_right">
+        <CustomButton 
+          class="btns-block__btn btns-block__btn_right"
+          href="#form-section"
+        >
           Sign up
         </CustomButton>
       </div>

@@ -21,12 +21,27 @@ export const useFormSection = ({ errors }: { errors: { [key: string]: Ref<string
   const usersStore = useUsersStore()
   const formFields: IFormFields = reactive(structuredClone(formFieldModel))
   const positionsList: Ref<IPosition[]> = ref([])
+  const successfullyRegister = ref(false)
 
-  const isActiveSubmitBtn = computed(() => {
+  const hasErrors = () => {
     return Object.entries(errors).reduce((acc, [key, value]) => {
       if (value.value.length) acc = false
       return acc
-    }, true) && JSON.stringify(formFields) !== JSON.stringify(formFieldModel)
+    }, true)
+  }
+
+  const isData = () => {
+    return Object.keys(formFields).reduce((isNotEqual, key) => {
+      return isNotEqual || formFields[key] !== formFieldModel[key];
+    }, false);
+    // return Object.keys(formFields).reduce((isEqual, key) => {
+    //   return isEqual && formFields[key] === formFieldModel[key];
+    // }, true);
+  }
+
+  const isActiveSubmitBtn = computed(() => {
+    console.log(hasErrors(), isData())
+    return hasErrors() && isData()
   })
 
   const getPositions = () => {
@@ -46,6 +61,7 @@ export const useFormSection = ({ errors }: { errors: { [key: string]: Ref<string
             usersStore.setUsers([])
             usersStore.setPage(1)
             usersStore.getUsers()
+            successfullyRegister.value = true
           })
       })
   }
@@ -56,6 +72,7 @@ export const useFormSection = ({ errors }: { errors: { [key: string]: Ref<string
     formFields,
     positionsList,
     submit,
-    isActiveSubmitBtn
+    isActiveSubmitBtn,
+    successfullyRegister
   }
 }

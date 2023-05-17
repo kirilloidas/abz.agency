@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ModalError from './components/ModalError.vue';
 import Header from './views/Header.vue';
 import TopSection from './views/TopSection.vue';
 import FormSection from './views/form-section/FormSection.vue';
@@ -6,6 +7,8 @@ import UsersSection from './views/users-section/UsersSection.vue';
 </script>
 
 <template>
+
+  <ModalError/>
   <Header/>
 
   <main class="page-main">
