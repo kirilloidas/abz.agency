@@ -31,16 +31,12 @@ export const useFormSection = ({ errors }: { errors: { [key: string]: Ref<string
   }
 
   const isData = () => {
-    return Object.keys(formFields).reduce((isNotEqual, key) => {
-      return isNotEqual || formFields[key] !== formFieldModel[key];
-    }, false);
-    // return Object.keys(formFields).reduce((isEqual, key) => {
-    //   return isEqual && formFields[key] === formFieldModel[key];
-    // }, true);
+    return Object.values(formFields).reduce((result, value) => {
+      return result && Boolean(value);
+    }, true);
   }
 
   const isActiveSubmitBtn = computed(() => {
-    console.log(hasErrors(), isData())
     return hasErrors() && isData()
   })
 
